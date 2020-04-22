@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <link href="manifest.webmanifest" rel="manifest">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+    <link href="https://66.media.tumblr.com/tumblr_lsf7w5bUxO1qbdn8eo1_500.jpg" rel="icon"
+        type="img/png">
+    <title>gb3h timer</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: black;
+            text-align: center;
+            color: black;
+            width: 90%;
+            height: 90%;
+            font-size: 80px;
+            user-select: none;
+        }
+
+        h1 {
+            margin: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        .a {
+            color: white;
+            top: 20%;
+        }
+
+        .b {
+            top: 10%;
+        }
+
+        a {
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
+    <div>
+        <h1 class="a">0 days 0 hours 0 minutes 0 seconds</h1>
+    </div>
+    <script>
+        navigator.serviceWorker.register('sw.js');
+        var x = 0;
+        // var n = d.getTime();
 
-<h1>Coming soon, stay tuned to my page! -G</h1>
-
+        var h = document.getElementsByTagName("h1");
+            console.log(h);
+        const last = Date.parse('06 Apr 2020 11:30:00 GMT');
+        q = setInterval(c, 250);
+        function c() {
+            var current;
+            current = new Date().getTime();
+            var seconds = ~~((current - last)/1000);
+            var minutes = ~~(seconds / 60);
+            var hours = ~~(minutes / 60);
+            var days = ~~(hours / 24);
+            minutes = minutes % 60;
+            seconds = seconds % 60;
+            hours = hours % 24;
+            h[0].innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ";
+        }
+    </script>
 </body>
+
 </html>

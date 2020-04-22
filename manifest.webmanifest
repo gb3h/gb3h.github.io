@@ -1,0 +1,13 @@
+{
+    "background_color": "#808080",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "https://66.media.tumblr.com/tumblr_lsf7w5bUxO1qbdn8eo1_500.jpg",
+            "sizes": "700x700",
+            "type": "image/png"
+        }
+    ],
+    "name": "gb3h",
+    "start_url": "index.html"
+}
